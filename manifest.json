@@ -1,0 +1,16 @@
+{
+  "name": "Mastodon Tweaks",
+  "description": "Some tweaks for Mastodon web advanced interface",
+  "version": "1.0",
+  "manifest_version": 3,
+  "background": {
+    "service_worker": "background.js"
+  },
+  "content_scripts": [
+    {
+      "matches": ["https://mstdn.shalyu.run/*"],
+      "js": ["tweaks_inject.js"]
+    }
+  ],
+  "permissions": ["activeTab", "scripting"]
+}
